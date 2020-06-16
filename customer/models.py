@@ -12,4 +12,4 @@ class CustomerDefaultAddress(models.Model):
     zip_code = models.CharField("ZIP / Postal code", max_length=12)
     city = models.CharField("City", max_length=1024)
     country = models.CharField("Country", max_length=20, choices=Country_choices)
-    default = 0
+    default = models.BooleanField(default=True)

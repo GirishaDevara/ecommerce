@@ -13,3 +13,7 @@ class CustomerDefaultAddress(models.Model):
     city = models.CharField("City", max_length=1024)
     country = models.CharField("Country", max_length=20, choices=Country_choices)
     default = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name
+
